@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<!-- Mirrored from colorlib.com/etc/tb/Table_Responsive_v1/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Jun 2021 09:55:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+	<title>Panel</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{% static 'table/images/icons/favicon.ico' %}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'table/vendor/bootstrap/css/bootstrap.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'table/fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'table/vendor/animate/animate.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'table/vendor/select2/select2.min.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'table/vendor/perfect-scrollbar/perfect-scrollbar.css' %}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'table/css/util.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'table/css/main.css' %}">
+<!--===============================================================================================-->
+<meta name="robots" content="noindex, follow">
+</head>
+<body>
+
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+					<table>
+						<thead>
+							<tr class="table100-head">
+								<th class="column1">ID</th>
+								<th class="column2">Ism</th>
+								<th class="column3">Familya</th>
+								<th class="column5">Email</th>
+								<th class="column6">Phone number</th>
+								<th class="column8">Message</th>
+								<th class="column7">Hudud</th>
+
+							</tr>
+						</thead>
+						<tbody>
+
+							{% for customer in customers %}
+								<tr>
+									<td class="column1">{{customer.id}}</td>
+									<td class="column2">{{customer.first_name}}</td>
+									<td class="column3">{{customer.last_name}}</td>
+									<td class="column4">{{customer.email}}</td>
+									<td class="column5">{{customer.phone_number}}</td>
+									<td class="column7">{{customer.message}}</td>
+									<td class="column6">{% if customer.place == 1 %}Toshkent
+										{% elif customer.place == 2 %}Andijon
+										{% elif customer.place == 3 %}Farg'ona
+										{% elif customer.place == 4 %}Namangan
+										{% elif customer.place == 5 %}Sirdaryo
+										{% elif customer.place == 6 %}Jizzax
+										{% elif customer.place == 7 %}Samarqand
+										{% elif customer.place == 8 %}Navoiy
+										{% elif customer.place == 9 %}Surxondaryo
+										{% elif customer.place == 10 %}Qashqadaryo
+										{% elif customer.place == 11 %}Xorazm
+										{% elif customer.place == 12 %}Qoraqalpoq
+										{% endif %}</td>
+
+								</tr>
+							{% endfor  %}
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<!--===============================================================================================-->
+	<script src="{% static 'table/vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'table/vendor/bootstrap/js/popper.js' %}"></script>
+	<script src="{% static 'table/vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'table/vendor/select2/select2.min.js' %}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'table/js/main.js' %}"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-23581568-13');
+	</script>
+
+<script defer src="../../../../static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"rayId":"660b676b3c800004","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2021.5.2","si":10}'></script>
+</body>
+
+<!-- Mirrored from colorlib.com/etc/tb/Table_Responsive_v1/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 17 Jun 2021 09:55:49 GMT -->
+</html>
